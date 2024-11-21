@@ -4,7 +4,7 @@ ReactDOM.render(
     <>
         <h1>This is netflix movie seris list</h1>
         <p>Favourate movie list</p>
-        <ol>
+        <ol type='i'>
             <li>First movie</li>
             <li>Second movie</li>
             <li>Third movie</li>
