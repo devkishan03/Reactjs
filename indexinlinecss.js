@@ -1,0 +1,44 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+import './index.css';
+const fname="kishan";
+const lname="singh";
+const webpage=document.getElementById('root');
+const dateobj=new Date();
+const date=dateobj.toLocaleDateString("en-GB");
+const time=dateobj.toLocaleTimeString();
+const imglink1='https://picsum.photos/100/100';
+const imglink2='https://picsum.photos/120/100';
+const imglink3='https://picsum.photos/130/100';
+const imglink4='https://picsum.photos/140/100';
+const weblink='#';
+
+
+const head={
+    color: '#ff9191',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    textTransform: 'capitalize',
+    fontFamily: "'Josefin Sans','sans-serif'",
+    marginTop:'1rem', 
+    textShadow:'1px 1px 2px blue'
+   };
+
+ReactDom.render(
+    <>
+        <h1 style={head}>{`My name is ${fname} ${lname}`}</h1>
+        <p>{`Todays date will be ${date}`}</p>
+        <p>{`Todays current time is ${time}`}</p>
+        <a className='pagelink' href='https://www.Google.com' target='_blank'>This is link for Google.com</a><br></br>
+        <div className='imgdiv'>
+        <img src={imglink1} alt='random images' height={100} width={100}/>
+        <img src={imglink2} alt='random images'/>
+        <img src={imglink3} alt='random images'/>
+        <a href={weblink} target='_blank'>
+        <img src={imglink4} alt='random images'/>
+        </a>
+        </div>
+        
+    </>,
+      webpage
+);
